@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpotWise — Privacy Policy</title>
+  <meta name="description" content="How SpotWise handles your information. No account, no personal data, nothing sold — explained in plain language." />
+  <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#171210" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper:        #F6F3EE;
+      --paper-2:      #EFEBE3;
+      --surface:      #FFFFFF;
+      --ink:          #181310;
+      --ink-2:        #45403A;
+      --ink-3:        #8A8077;
+      --line:         rgba(24,19,16,0.10);
+      --line-soft:    rgba(24,19,16,0.06);
+
+      --accent:       #E2521B;
+      --accent-deep:  #B83C0F;
+      --accent-soft:  #FBE7DA;
+
+      --safe:         #127A52;
+      --safe-soft:    #E3F2EA;
+
+      --espresso:     #171210;
+      --espresso-2:   #221A16;
+      --cream:        #F6F0E8;
+
+      --radius:       20px;
+      --radius-sm:    13px;
+      --shadow-sm:    0 1px 2px rgba(24,19,16,.05);
+      --shadow:       0 1px 2px rgba(24,19,16,.04), 0 18px 40px -22px rgba(24,19,16,.26);
+      --maxw:         1080px;
+    }
+
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--paper);
+      color: var(--ink-2);
+      line-height: 1.72;
+      font-size: 16.5px;
+      font-weight: 450;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--accent-deep); }
+
+    ::selection { background: var(--accent); color: #fff; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 12px;
+      z-index: 100;
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .skip-link:focus { left: 16px; }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ───────────────── Top bar + hero (dark band) ───────────────── */
+    .band {
+      background: var(--espresso);
+      background-image:
+        radial-gradient(900px 360px at 85% -10%, rgba(226,82,27,0.22), transparent 60%),
+        radial-gradient(620px 320px at 5% 0%, rgba(226,82,27,0.10), transparent 55%);
+      color: var(--cream);
+    }
+
+    .topbar {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      background: linear-gradient(150deg, #2a201b, #181210);
+      border: 1px solid rgba(246,240,232,0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .mark svg { display: block; }
+
+    .brand-name {
+      font-size: 19px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: -0.3px;
+    }
+
+    .topbar-tag {
+      margin-left: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(246,240,232,0.46);
+    }
+
+    .hero {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 34px 24px 64px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -1.6px;
+      color: #fff;
+      max-width: 13ch;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      margin-top: 22px;
+      max-width: 56ch;
+      font-size: clamp(16px, 2.4vw, 18.5px);
+      line-height: 1.62;
+      color: rgba(246,240,232,0.74);
+    }
+
+    .hero-meta {
+      margin-top: 22px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      color: rgba(246,240,232,0.5);
+      letter-spacing: 0.2px;
+    }
+
+    .chips {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px 8px 12px;
+      border-radius: 999px;
+      background: rgba(246,240,232,0.07);
+      border: 1px solid rgba(246,240,232,0.14);
+      color: rgba(246,240,232,0.92);
+      font-size: 13.5px;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+    .chip svg { flex-shrink: 0; color: var(--accent); }
+
+    /* ───────────────── Layout ───────────────── */
+    .shell {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 44px 0 72px;
+    }
+
+    /* ───────────────── Table of contents ───────────────── */
+    .toc {
+      margin-bottom: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .toc > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 15px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 14.5px;
+    }
+    .toc > summary::-webkit-details-marker { display: none; }
+    .toc > summary::after {
+      content: "";
+      margin-left: auto;
+      width: 9px; height: 9px;
+      border-right: 2px solid var(--ink-3);
+      border-bottom: 2px solid var(--ink-3);
+      transform: rotate(45deg);
+      transition: transform .25s ease;
+    }
+    .toc[open] > summary::after { transform: rotate(-135deg); }
+    .toc-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .toc nav {
+      padding: 4px 8px 12px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc li { counter-increment: toc; }
+    .toc a {
+      display: flex;
+      gap: 11px;
+      align-items: baseline;
+      padding: 8px 12px;
+      border-radius: 9px;
+      text-decoration: none;
+      color: var(--ink-2);
+      font-size: 14px;
+      font-weight: 500;
+      transition: background .15s ease, color .15s ease;
+    }
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-3);
+      font-weight: 500;
+    }
+    .toc a:hover { background: var(--paper-2); color: var(--ink); }
+    .toc a.active { background: var(--accent-soft); color: var(--accent-deep); }
+    .toc a.active::before { color: var(--accent); }
+
+    /* ───────────────── Sections ───────────────── */
+    .content { min-width: 0; }
+
+    .section {
+      scroll-margin-top: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 30px 32px 32px;
+      margin-bottom: 18px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+    .section-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      padding: 5px 9px;
+      background: var(--accent-soft);
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(21px, 3.4vw, 26px);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+    }
+
+    .section p {
+      margin-bottom: 14px;
+      color: var(--ink-2);
+      font-size: 16px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section strong { color: var(--ink); font-weight: 600; }
+    .section a { font-weight: 600; }
+
+    .lead {
+      font-size: 16.5px !important;
+      color: var(--ink) !important;
+    }
+
+    /* Definition rows (what we collect / sharing categories) */
+    .rows { margin-top: 6px; }
+    .row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 4px 26px;
+      padding: 16px 0;
+      border-top: 1px solid var(--line-soft);
+    }
+    .row:first-child { border-top: none; padding-top: 4px; }
+    .row dt {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 15px;
+    }
+    .row dd { color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+    @media (max-width: 600px) {
+      .row { grid-template-columns: 1fr; gap: 4px; }
+    }
+
+    /* "What we don't collect" grid */
+    .nocollect {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 4px 0 18px;
+    }
+    .nocollect li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 13px 15px;
+      background: var(--safe-soft);
+      border: 1px solid rgba(18,122,82,0.16);
+      border-radius: 11px;
+      color: #0c5638;
+      font-size: 14.5px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+    .nocollect li svg { flex-shrink: 0; color: var(--safe); }
+    @media (max-width: 560px) { .nocollect { grid-template-columns: 1fr; } }
+
+    /* Bulleted list */
+    .ul { margin: 2px 0 14px; padding-left: 2px; }
+    .ul li {
+      list-style: none;
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      color: var(--ink-2);
+      font-size: 16px;
+    }
+    .ul li:last-child { margin-bottom: 0; }
+    .ul li::before {
+      content: "";
+      position: absolute;
+      left: 2px; top: 11px;
+      width: 6px; height: 6px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+
+    /* Callout */
+    .callout {
+      margin: 16px 0 4px;
+      padding: 16px 18px;
+      border-radius: 13px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+    }
+    .callout p { font-size: 15px; margin: 0; }
+    .callout .callout-title {
+      display: block;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+      font-size: 14.5px;
+    }
+
+    /* Contact block */
+    .contact-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: var(--espresso);
+      border-radius: 14px;
+      margin-top: 16px;
+    }
+    .contact-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-text { color: var(--cream); font-size: 14px; }
+    .contact-text span { display: block; color: rgba(246,240,232,0.55); margin-bottom: 3px; font-size: 13px; }
+    .contact-text a {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: -0.2px;
+    }
+    .contact-text a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+
+    /* ───────────────── Footer ───────────────── */
+    footer {
+      background: var(--espresso);
+      color: rgba(246,240,232,0.5);
+      padding: 34px 24px;
+    }
+    .footer-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .footer-inner strong { color: rgba(246,240,232,0.82); font-weight: 600; }
+    .footer-inner .sep { color: rgba(246,240,232,0.7); }
+
+    /* ───────────────── Reveal (progressive enhancement) ───────────────── */
+    .reveal-on .section {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .reveal-on .section.in { opacity: 1; transform: none; }
+
+    /* ───────────────── Desktop two-column ───────────────── */
+    @media (min-width: 1000px) {
+      .layout {
+        grid-template-columns: 244px minmax(0, 1fr);
+        gap: 52px;
+        align-items: start;
+      }
+      .toc {
+        position: sticky;
+        top: 24px;
+        margin-bottom: 0;
+      }
+      .toc > summary { display: none; }
+      .toc[open] nav, .toc nav { display: block; }
+      .toc { padding-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#overview">Skip to content</a>
+
+<div class="band">
+  <header class="topbar">
+    <div class="mark" aria-hidden="true">
+      <!-- neutral shield mark -->
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.6 4.6 5.4v6c0 4.6 3.1 7.6 7.4 9.4 4.3-1.8 7.4-4.8 7.4-9.4v-6L12 2.6Z" stroke="#E2521B" stroke-width="1.9" stroke-linejoin="round"/>
+        <path d="M9 12.2l2.1 2.1L15.2 10" stroke="#F6F0E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <span class="brand-name">SpotWise</span>
+    <span class="topbar-tag">Privacy</span>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero-eyebrow">SpotWise · Privacy Policy</p>
+    <h1 id="hero-title">Privacy,<br/><em>in plain language.</em></h1>
+    <p class="hero-sub">SpotWise is built to do its job without knowing who you are. No account, no personal details, and nothing sold — here is exactly what we do and don't collect.</p>
+    <p class="hero-meta">Last updated June 14, 2026 · Effective June 14, 2026</p>
+    <div class="chips">
+      <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No account</span>
+      <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No personal data</span>
+      <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No location tracking</span>
+      <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Never sold</span>
+    </div>
+  </section>
+</div>
+
+<div class="shell">
+  <div class="layout">
+
+    <!-- Table of contents -->
+    <details class="toc" open>
+      <summary><span class="toc-label">On this page</span></summary>
+      <nav aria-label="Table of contents">
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#collect">What we collect</a></li>
+          <li><a href="#dont-collect">What we don't collect</a></li>
+          <li><a href="#use">How we use information</a></li>
+          <li><a href="#sharing">How information is shared</a></li>
+          <li><a href="#retention">Data retention &amp; deletion</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#transfers">International transfers</a></li>
+          <li><a href="#rights">Your privacy rights</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ol>
+      </nav>
+    </details>
+
+    <main class="content">
+
+      <!-- 01 -->
+      <section class="section" id="overview" aria-labelledby="h-overview">
+        <div class="section-head"><span class="section-num">01</span><h2 id="h-overview">Overview</h2></div>
+        <p class="lead">This Privacy Policy explains how SpotWise (&ldquo;SpotWise&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) handles information when you use the SpotWise mobile app (the &ldquo;app&rdquo;).</p>
+        <p>In short: SpotWise processes the content you choose to share with the app to return relevant results — and it does this without requiring an account or collecting information that identifies you.</p>
+        <p>By using SpotWise, you agree to the practices described in this policy. If you do not agree, please do not use the app.</p>
+      </section>
+
+      <!-- 02 -->
+      <section class="section" id="collect" aria-labelledby="h-collect">
+        <div class="section-head"><span class="section-num">02</span><h2 id="h-collect">What We Collect</h2></div>
+        <p>We keep data collection to the minimum needed for the app to work. The list below is complete.</p>
+        <dl class="rows">
+          <div class="row">
+            <dt>Content you share</dt>
+            <dd>When you actively share content with the app (for example, a link or an image), we process it to perform the action you requested and return your results. You decide what, if anything, to share.</dd>
+          </div>
+          <div class="row">
+            <dt>Recent activity</dt>
+            <dd>A history of your recent activity is stored <strong>locally on your device</strong> so you can revisit it. It is not uploaded to our servers, and you can clear it any time from in-app Settings.</dd>
+          </div>
+          <div class="row">
+            <dt>Anonymous usage analytics</dt>
+            <dd>Aggregated, non-identifying metrics about how the app performs and is used, so we can fix issues and improve it. These cannot be used to identify you.</dd>
+          </div>
+          <div class="row">
+            <dt>App-integrity signals</dt>
+            <dd>Technical signals used to confirm that requests come from the genuine SpotWise app and to help prevent abuse. These do not identify you.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- 03 -->
+      <section class="section" id="dont-collect" aria-labelledby="h-dont">
+        <div class="section-head"><span class="section-num">03</span><h2 id="h-dont">What We Do <em>Not</em> Collect</h2></div>
+        <p>We designed SpotWise so that none of the following ever happens:</p>
+        <ul class="nocollect">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No account or sign-in</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No name, email, or phone number</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No location (precise or approximate)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No contacts</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No access to your photo library</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No payment or financial information</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No advertising profiles or cross-app tracking</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>We never sell your data</li>
+        </ul>
+        <p>We do not build user profiles, and we do not track you across other apps or websites. Ever.</p>
+      </section>
+
+      <!-- 04 -->
+      <section class="section" id="use" aria-labelledby="h-use">
+        <div class="section-head"><span class="section-num">04</span><h2 id="h-use">How We Use Information</h2></div>
+        <p>We use the limited information described above only to:</p>
+        <ul class="ul">
+          <li>provide, operate, and maintain the app and its features;</li>
+          <li>process the content you choose to share and return your results;</li>
+          <li>keep the service secure, prevent abuse, and diagnose technical problems;</li>
+          <li>understand overall usage so we can improve the app.</li>
+        </ul>
+        <p>We do <strong>not</strong> use your information for advertising, profiling, or any purpose unrelated to running the app.</p>
+      </section>
+
+      <!-- 05 -->
+      <section class="section" id="sharing" aria-labelledby="h-sharing">
+        <div class="section-head"><span class="section-num">05</span><h2 id="h-sharing">How Information Is Shared</h2></div>
+        <p><strong>We never sell your data,</strong> and we do not share it for advertising or cross-app tracking.</p>
+        <p>We rely on a small number of trusted service providers to operate the app. They may process data only on our behalf, and only to provide their service to us:</p>
+        <dl class="rows">
+          <div class="row">
+            <dt>Cloud hosting &amp; infrastructure</dt>
+            <dd>To run our backend and handle your requests.</dd>
+          </div>
+          <div class="row">
+            <dt>Content processing</dt>
+            <dd>To process the content you choose to share and generate your results.</dd>
+          </div>
+          <div class="row">
+            <dt>Analytics</dt>
+            <dd>To provide us with anonymous, aggregated usage and performance metrics.</dd>
+          </div>
+          <div class="row">
+            <dt>App integrity &amp; anti-abuse</dt>
+            <dd>To verify the app is genuine and protect the service against abuse.</dd>
+          </div>
+        </dl>
+        <div class="callout">
+          <p><span class="callout-title">Affiliate links</span>Your results may include links to third-party websites, and some of these may be affiliate links — meaning we may earn a commission if you make a purchase through them, at no extra cost to you. We do not share your personal information with these sites, and once you leave the app their own privacy policies apply.</p>
+        </div>
+        <p style="margin-top:16px;">We may also disclose information where required by law, or where reasonably necessary to protect the rights, safety, and security of our users, the public, or SpotWise — for example, to prevent fraud or abuse.</p>
+      </section>
+
+      <!-- 06 -->
+      <section class="section" id="retention" aria-labelledby="h-retention">
+        <div class="section-head"><span class="section-num">06</span><h2 id="h-retention">Data Retention &amp; Deletion</h2></div>
+        <p>We do not keep your data longer than needed:</p>
+        <ul class="ul">
+          <li>Content you share is processed to produce your result and is <strong>not stored long-term</strong>. To keep the app fast, results may be cached on our servers temporarily (a few hours) and are then deleted automatically.</li>
+          <li>Your recent activity lives <strong>only on your device</strong>. You can clear it at any time from in-app Settings, and uninstalling the app removes all data stored locally.</li>
+        </ul>
+        <p>To request deletion of any data associated with your use of SpotWise, email us using the details in the <a href="#contact">Contact</a> section. We will respond within 30 days.</p>
+      </section>
+
+      <!-- 07 -->
+      <section class="section" id="security" aria-labelledby="h-security">
+        <div class="section-head"><span class="section-num">07</span><h2 id="h-security">Security</h2></div>
+        <p>We use reasonable technical and organizational measures to protect information against unauthorized access, loss, or misuse. No method of transmission over the internet or electronic storage is 100% secure, however, so we cannot guarantee absolute security.</p>
+      </section>
+
+      <!-- 08 -->
+      <section class="section" id="children" aria-labelledby="h-children">
+        <div class="section-head"><span class="section-num">08</span><h2 id="h-children">Children's Privacy</h2></div>
+        <p>SpotWise is not directed to children under 13 (or under 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will take steps to delete it.</p>
+      </section>
+
+      <!-- 09 -->
+      <section class="section" id="transfers" aria-labelledby="h-transfers">
+        <div class="section-head"><span class="section-num">09</span><h2 id="h-transfers">International Data Transfers</h2></div>
+        <p>SpotWise operates globally, and your information may be processed on servers located outside your country or region, where data-protection laws may differ. Wherever your information is processed, we protect it as described in this policy.</p>
+      </section>
+
+      <!-- 10 -->
+      <section class="section" id="rights" aria-labelledby="h-rights">
+        <div class="section-head"><span class="section-num">10</span><h2 id="h-rights">Your Privacy Rights</h2></div>
+        <p>Depending on where you live, you may have rights to access, correct, or delete your personal information, or to object to or restrict certain processing.</p>
+        <p>Because SpotWise requires no account and does not collect information that identifies you, we usually hold little or no personal data about you. To exercise any rights, or if you have questions, contact us using the details below. We will not discriminate against you for exercising your privacy rights.</p>
+      </section>
+
+      <!-- 11 -->
+      <section class="section" id="changes" aria-labelledby="h-changes">
+        <div class="section-head"><span class="section-num">11</span><h2 id="h-changes">Changes to This Policy</h2></div>
+        <p>We may update this Privacy Policy from time to time. When we do, we will revise the &ldquo;Last updated&rdquo; date shown above. For significant changes, we will provide additional notice through the app or our store listing.</p>
+        <p>Your continued use of SpotWise after an update takes effect means you accept the revised policy.</p>
+      </section>
+
+      <!-- 12 -->
+      <section class="section" id="contact" aria-labelledby="h-contact">
+        <div class="section-head"><span class="section-num">12</span><h2 id="h-contact">Contact Us</h2></div>
+        <p>Questions about this policy, requests to delete data, or any privacy concern — we are happy to help.</p>
+        <div class="contact-block">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#fff" stroke-width="2"/>
+              <path d="M4 7l8 6 8-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="contact-text">
+            <span>SpotWise Support</span>
+            <a href="mailto:send2gag@gmail.com">send2gag@gmail.com</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span><strong>SpotWise</strong> <span class="sep">·</span> Privacy Policy <span class="sep">·</span> Last updated June 14, 2026</span>
+    <span>© 2026 SpotWise. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+    var sections = links
+      .map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); })
+      .filter(Boolean);
+
+    // Scroll-spy: highlight the section currently in view.
+    if ('IntersectionObserver' in window && sections.length) {
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      var visible = new Set();
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { visible.add(e.target.id); }
+          else { visible.delete(e.target.id); }
+        });
+        // Choose the topmost visible section.
+        var current = null, top = Infinity;
+        visible.forEach(function (id) {
+          var r = document.getElementById(id).getBoundingClientRect().top;
+          if (r < top) { top = r; current = id; }
+        });
+        links.forEach(function (a) {
+          var on = a.getAttribute('href').slice(1) === current;
+          a.classList.toggle('active', on);
+          if (on) { a.setAttribute('aria-current', 'true'); }
+          else { a.removeAttribute('aria-current'); }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+      sections.forEach(function (s) { spy.observe(s); });
+    }
+
+    // Progressive scroll-reveal, disabled when the user prefers reduced motion.
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce && 'IntersectionObserver' in window) {
+      document.body.classList.add('reveal-on');
+      var reveal = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.section').forEach(function (s) { reveal.observe(s); });
+    }
+  })();
+</script>
+
+</body>
+</html>
