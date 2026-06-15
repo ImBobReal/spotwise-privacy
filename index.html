@@ -7,38 +7,35 @@
   <meta name="description" content="How SpotWise handles your information. No account, no personal data, nothing sold — explained in plain language." />
   <meta name="robots" content="index, follow" />
   <meta name="color-scheme" content="light" />
-  <meta name="theme-color" content="#171210" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#f5f5f7" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --paper:        #F6F3EE;
-      --paper-2:      #EFEBE3;
-      --surface:      #FFFFFF;
-      --ink:          #181310;
-      --ink-2:        #45403A;
-      --ink-3:        #8A8077;
-      --line:         rgba(24,19,16,0.10);
-      --line-soft:    rgba(24,19,16,0.06);
+      --font-sans:    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Inter", Arial, sans-serif;
 
-      --accent:       #E2521B;
-      --accent-deep:  #B83C0F;
-      --accent-soft:  #FBE7DA;
+      --paper:        #f5f5f7;
+      --paper-2:      #ececee;
+      --surface:      #ffffff;
+      --ink:          #1d1d1f;
+      --ink-2:        #424245;
+      --ink-3:        #6e6e73;
+      --line:         #d2d2d7;
+      --line-soft:    #e4e4e7;
 
-      --safe:         #127A52;
-      --safe-soft:    #E3F2EA;
+      --accent:       #0066cc;
+      --accent-deep:  #0071e3;
+      --accent-soft:  #e8f0fe;
 
-      --espresso:     #171210;
-      --espresso-2:   #221A16;
-      --cream:        #F6F0E8;
+      --safe:         #0066cc;
+      --safe-soft:    #f5f5f7;
 
-      --radius:       20px;
-      --radius-sm:    13px;
-      --shadow-sm:    0 1px 2px rgba(24,19,16,.05);
-      --shadow:       0 1px 2px rgba(24,19,16,.04), 0 18px 40px -22px rgba(24,19,16,.26);
+      --footer-bg:    #f5f5f7;
+
+      --radius:       18px;
+      --radius-sm:    12px;
+      --shadow-sm:    none;
+      --shadow:       0 1px 1px rgba(0,0,0,.03);
       --maxw:         1080px;
     }
 
@@ -46,17 +43,19 @@
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: var(--font-sans);
       background: var(--paper);
       color: var(--ink-2);
-      line-height: 1.72;
-      font-size: 16.5px;
-      font-weight: 450;
+      line-height: 1.7;
+      font-size: 17px;
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
 
-    a { color: var(--accent-deep); }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    a:hover { color: var(--accent-deep); }
 
     ::selection { background: var(--accent); color: #fff; }
 
@@ -80,121 +79,111 @@
       border-radius: 4px;
     }
 
-    /* ───────────────── Top bar + hero (dark band) ───────────────── */
+    /* ───────────────── Top bar + hero (light band) ───────────────── */
     .band {
-      background: var(--espresso);
-      background-image:
-        radial-gradient(900px 360px at 85% -10%, rgba(226,82,27,0.22), transparent 60%),
-        radial-gradient(620px 320px at 5% 0%, rgba(226,82,27,0.10), transparent 55%);
-      color: var(--cream);
+      background: var(--surface);
+      color: var(--ink);
     }
 
     .topbar {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 22px 24px;
+      padding: 18px 24px;
       display: flex;
       align-items: center;
-      gap: 13px;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
     }
 
     .mark {
-      width: 36px;
-      height: 36px;
-      border-radius: 11px;
-      background: linear-gradient(150deg, #2a201b, #181210);
-      border: 1px solid rgba(246,240,232,0.14);
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--paper);
+      border: 1px solid var(--line);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
     }
     .mark svg { display: block; }
 
     .brand-name {
       font-size: 19px;
       font-weight: 600;
-      color: #fff;
-      letter-spacing: -0.3px;
+      color: var(--ink);
+      letter-spacing: -0.2px;
     }
 
     .topbar-tag {
       margin-left: auto;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(246,240,232,0.46);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--ink-3);
+      letter-spacing: -0.1px;
     }
 
     .hero {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 34px 24px 64px;
+      padding: 64px 24px 60px;
     }
 
     .hero-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
+      font-size: 15px;
       font-weight: 500;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 18px;
+      letter-spacing: -0.1px;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-optical-sizing: auto;
-      font-weight: 600;
-      font-size: clamp(38px, 7vw, 68px);
-      line-height: 1.02;
-      letter-spacing: -1.6px;
-      color: #fff;
-      max-width: 13ch;
+      font-weight: 700;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      max-width: 16ch;
     }
     .hero h1 em {
-      font-style: italic;
-      font-weight: 500;
-      color: var(--accent);
+      font-style: normal;
+      font-weight: 700;
+      color: var(--ink-3);
     }
 
     .hero-sub {
-      margin-top: 22px;
-      max-width: 56ch;
-      font-size: clamp(16px, 2.4vw, 18.5px);
-      line-height: 1.62;
-      color: rgba(246,240,232,0.74);
+      margin-top: 24px;
+      max-width: 58ch;
+      font-size: clamp(17px, 2.4vw, 21px);
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--ink-2);
     }
 
     .hero-meta {
       margin-top: 22px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12.5px;
-      color: rgba(246,240,232,0.5);
-      letter-spacing: 0.2px;
+      font-size: 14px;
+      color: var(--ink-3);
+      letter-spacing: -0.1px;
     }
 
     .chips {
-      margin-top: 30px;
+      margin-top: 32px;
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
+      gap: 10px;
     }
     .chip {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 8px 14px 8px 12px;
-      border-radius: 999px;
-      background: rgba(246,240,232,0.07);
-      border: 1px solid rgba(246,240,232,0.14);
-      color: rgba(246,240,232,0.92);
-      font-size: 13.5px;
+      padding: 9px 16px 9px 13px;
+      border-radius: 980px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 14px;
       font-weight: 500;
-      backdrop-filter: blur(4px);
     }
     .chip svg { flex-shrink: 0; color: var(--accent); }
 
@@ -243,11 +232,10 @@
     }
     .toc[open] > summary::after { transform: rotate(-135deg); }
     .toc-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.1px;
+      color: var(--ink-3);
     }
     .toc nav {
       padding: 4px 8px 12px;
@@ -271,13 +259,13 @@
     }
     .toc a::before {
       content: counter(toc, decimal-leading-zero);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
+      font-size: 12px;
       color: var(--ink-3);
       font-weight: 500;
+      font-variant-numeric: tabular-nums;
     }
-    .toc a:hover { background: var(--paper-2); color: var(--ink); }
-    .toc a.active { background: var(--accent-soft); color: var(--accent-deep); }
+    .toc a:hover { background: var(--paper); color: var(--ink); }
+    .toc a.active { background: var(--accent-soft); color: var(--accent); }
     .toc a.active::before { color: var(--accent); }
 
     /* ───────────────── Sections ───────────────── */
@@ -300,35 +288,35 @@
       margin-bottom: 18px;
     }
     .section-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--accent);
-      padding: 5px 9px;
-      background: var(--accent-soft);
-      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-3);
+      padding: 4px 10px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 7px;
       flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
     }
     .section h2 {
-      font-family: 'Fraunces', Georgia, serif;
       font-weight: 600;
-      font-size: clamp(21px, 3.4vw, 26px);
-      line-height: 1.15;
-      letter-spacing: -0.5px;
+      font-size: clamp(22px, 3.4vw, 28px);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
       color: var(--ink);
     }
 
     .section p {
       margin-bottom: 14px;
       color: var(--ink-2);
-      font-size: 16px;
+      font-size: 17px;
     }
     .section p:last-child { margin-bottom: 0; }
     .section strong { color: var(--ink); font-weight: 600; }
-    .section a { font-weight: 600; }
+    .section a { font-weight: 500; }
 
     .lead {
-      font-size: 16.5px !important;
+      font-size: 18px !important;
       color: var(--ink) !important;
     }
 
@@ -364,16 +352,16 @@
       display: flex;
       align-items: center;
       gap: 11px;
-      padding: 13px 15px;
-      background: var(--safe-soft);
-      border: 1px solid rgba(18,122,82,0.16);
-      border-radius: 11px;
-      color: #0c5638;
-      font-size: 14.5px;
+      padding: 14px 16px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      font-size: 15px;
       font-weight: 500;
       line-height: 1.35;
     }
-    .nocollect li svg { flex-shrink: 0; color: var(--safe); }
+    .nocollect li svg { flex-shrink: 0; color: var(--accent); }
     @media (max-width: 560px) { .nocollect { grid-template-columns: 1fr; } }
 
     /* Bulleted list */
@@ -384,15 +372,15 @@
       padding-left: 22px;
       margin-bottom: 10px;
       color: var(--ink-2);
-      font-size: 16px;
+      font-size: 17px;
     }
     .ul li:last-child { margin-bottom: 0; }
     .ul li::before {
       content: "";
       position: absolute;
-      left: 2px; top: 11px;
+      left: 2px; top: 10px;
       width: 6px; height: 6px;
-      border-radius: 2px;
+      border-radius: 50%;
       background: var(--accent);
     }
 
@@ -400,7 +388,7 @@
     .callout {
       margin: 16px 0 4px;
       padding: 16px 18px;
-      border-radius: 13px;
+      border-radius: 12px;
       background: var(--paper);
       border: 1px solid var(--line);
       border-left: 3px solid var(--accent);
@@ -420,7 +408,8 @@
       align-items: center;
       gap: 16px;
       padding: 20px;
-      background: var(--espresso);
+      background: var(--paper);
+      border: 1px solid var(--line);
       border-radius: 14px;
       margin-top: 16px;
     }
@@ -431,21 +420,22 @@
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .contact-text { color: var(--cream); font-size: 14px; }
-    .contact-text span { display: block; color: rgba(246,240,232,0.55); margin-bottom: 3px; font-size: 13px; }
+    .contact-text { color: var(--ink-2); font-size: 14px; }
+    .contact-text span { display: block; color: var(--ink-3); margin-bottom: 3px; font-size: 13px; }
     .contact-text a {
-      color: #fff;
+      color: var(--accent);
       font-size: 18px;
       font-weight: 600;
       text-decoration: none;
       letter-spacing: -0.2px;
     }
-    .contact-text a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+    .contact-text a:hover { text-decoration: underline; }
 
     /* ───────────────── Footer ───────────────── */
     footer {
-      background: var(--espresso);
-      color: rgba(246,240,232,0.5);
+      background: var(--footer-bg);
+      border-top: 1px solid var(--line);
+      color: var(--ink-3);
       padding: 34px 24px;
     }
     .footer-inner {
@@ -458,8 +448,8 @@
       justify-content: space-between;
       font-size: 13px;
     }
-    .footer-inner strong { color: rgba(246,240,232,0.82); font-weight: 600; }
-    .footer-inner .sep { color: rgba(246,240,232,0.7); }
+    .footer-inner strong { color: var(--ink-2); font-weight: 600; }
+    .footer-inner .sep { color: var(--ink-3); }
 
     /* ───────────────── Reveal (progressive enhancement) ───────────────── */
     .reveal-on .section {
@@ -496,8 +486,8 @@
     <div class="mark" aria-hidden="true">
       <!-- neutral shield mark -->
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.6 4.6 5.4v6c0 4.6 3.1 7.6 7.4 9.4 4.3-1.8 7.4-4.8 7.4-9.4v-6L12 2.6Z" stroke="#E2521B" stroke-width="1.9" stroke-linejoin="round"/>
-        <path d="M9 12.2l2.1 2.1L15.2 10" stroke="#F6F0E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 2.6 4.6 5.4v6c0 4.6 3.1 7.6 7.4 9.4 4.3-1.8 7.4-4.8 7.4-9.4v-6L12 2.6Z" stroke="#1d1d1f" stroke-width="1.9" stroke-linejoin="round"/>
+        <path d="M9 12.2l2.1 2.1L15.2 10" stroke="#0066cc" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
     <span class="brand-name">SpotWise</span>
